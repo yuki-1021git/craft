@@ -1247,6 +1247,113 @@ img, svg { display: block; max-width: 100%; }
   transform: translateY(0);
 }
 
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 100svh;
+    background: none;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url('img/hero.jpeg') center center / cover no-repeat;
+  }
+
+  .hero-bg {
+    z-index: 1;
+    background: rgba(8, 18, 33, 0.36);
+  }
+
+  .hero-pattern {
+    opacity: 0.2;
+    mask-image: none;
+  }
+
+  .hero-overlay {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(13, 26, 46, 0.2) 0%, rgba(13, 26, 46, 0.58) 100%);
+  }
+
+  .hero-meta,
+  .hero-inner,
+  .hero-scroll {
+    z-index: 2;
+  }
+
+  .hero-meta {
+    padding: 12px 24px;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .meta-label {
+    color: rgba(250, 248, 243, 0.72);
+  }
+
+  .meta-val {
+    color: var(--paper);
+  }
+
+  .hero-inner {
+    max-width: 980px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px 24px 64px;
+  }
+
+  .hero-tag {
+    color: rgba(250, 248, 243, 0.85);
+    margin-bottom: 0;
+  }
+
+  .hero-h {
+    font-size: clamp(34px, 6.2vw, 56px);
+    color: var(--paper);
+    margin-bottom: 16px;
+  }
+
+  .h-line-2 {
+    color: #ff8a63;
+  }
+
+  .h-line-2::before {
+    background: #ff8a63;
+  }
+
+  .hero-lead {
+    color: rgba(250, 248, 243, 0.9);
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+
+  .cta-main {
+    background: rgba(13, 26, 46, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .cta-sub {
+    color: var(--paper);
+    border-bottom-color: rgba(250, 248, 243, 0.7);
+  }
+
+  .hero-photo {
+    display: none;
+  }
+
+  .hero-scroll {
+    color: rgba(250, 248, 243, 0.72);
+  }
+
+  .scroll-line {
+    background: rgba(250, 248, 243, 0.45);
+  }
+
+  .scroll-line::after {
+    background: var(--paper);
+  }
+}
+
 /* ========================================
    RESPONSIVE
    ======================================== */
@@ -1256,9 +1363,8 @@ img, svg { display: block; max-width: 100%; }
   .hamburger { display: flex; justify-self: end; }
 
   .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 60px;
-    padding: 60px 24px 40px;
+    gap: 20px;
+    padding: 28px 24px 40px;
   }
 
   .hero-photo {
